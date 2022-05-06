@@ -1,0 +1,47 @@
+@import "~bootstrap/scss/bootstrap";
+
+
+
+#nav-test {
+    display: flex;
+    justify-content: space-between;
+    // background: radial-gradient(#fff, #ffd6d6);
+    background: #0c0c0c;
+    font-size: 20px;
+    padding-left: 75px;
+    padding-right: 75px;
+}
+
+#nav-test ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+ #nav-test a {
+    color: #808080;
+}
+
+#second-row {
+    background: gray;
+}
+
+.col-sm-3 img {
+   width: 100%;
+   height: auto;
+}
+
+.col-sm img {
+    width: 100%;
+    height: auto;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex-item {
+    background: gray;
+    height: 300px;
+    width: 200px;
+}

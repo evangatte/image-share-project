@@ -1,0 +1,52 @@
+{
+  "name": "express-sfcc-training",
+  "version": "1.1.0",
+  "description": "Boilerplate meant to be used for SFCC training",
+  "main": "app.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development --watch",
+    "images": "node ./bin/images.js",
+    "server": "nodemon app.js"
+  },
+  "author": "Colby Gatte",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/colbygatte/express-sfcc-training.git"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5",
+    "dotenv": "^6.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.16.4",
+    "express-router": "0.0.1",
+    "jquery": "^3.5.1",
+    "mongoose": "^6.1.7",
+    "nodemon": "^1.18.4",
+    "popper.js": "^1.16.1",
+    "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
+    "autoprefixer": "^9.8.6",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.2.2",
+    "dotenv-webpack": "^2.0.0",
+    "exports-loader": "^1.1.0",
+    "fast-glob": "^3.2.4",
+    "lodash": "^4.17.20",
+    "mime-types": "^2.1.27",
+    "mini-css-extract-plugin": "^0.10.0",
+    "node-sass": "^4.14.1",
+    "path": "^0.12.7",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^10.0.1",
+    "sharp": "^0.26.0",
+    "tar": "^6.0.5",
+    "trash": "^6.1.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}
