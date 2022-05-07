@@ -1,0 +1,13 @@
+.image-row {
+	.col {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	height: 33vh;
+	border: solid;
+	.medium-image {
+		width: auto;
+		height: 30vh;
+	}
+}

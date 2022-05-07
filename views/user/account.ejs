@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+</head>
+<body>
+<%- include('../partials/header') %>
+
+
+	<div class="container">
+		<div class="row">
+			<div class="col text-center">
+				<% if (currentUser) { %> 
+					<h1>Welcome <%= currentUser.firstName %></h1>
+				<% } else { %> 
+					<h1>Please Log In</h1>
+				<% } %> 
+			</div>
+		</div>
+		<div class="row mt-5">
+			<div class="col text-center">
+				<button type="button" class="btn btn-success" data-toggle="modal" data-target="#uploadModal">Upload Something?</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal" id="uploadModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Upload Image</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form action="/user/upload" method="POST" enctype="multipart/form-data">
+						<div class="form-group">
+							<input type="file" name="testImage">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Description" name="description">
+						</div>
+						<button type="submit" class="btn btn-success">Submit</button>
+					</form>
+				</div>
+				<div class="modal-footer">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container mt-5">
+		<div class="row image-row text-center">
+			<div class="col">
+				<img class="medium-image" src="/uploades/new41.png" alt="">
+			</div>
+			<div class="col">
+				<img class="medium-image" src="/uploades/new84.jpeg" alt="">
+			</div>
+		</div>
+	</div>
+
+<%- include('../partials/footer') %>
+</body>
+</html>

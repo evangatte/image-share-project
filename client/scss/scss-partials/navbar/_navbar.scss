@@ -1,0 +1,15 @@
+#main-nav {
+    display: flex;
+    justify-content: space-between;
+    background: #0c0c0c;
+    font-size: 20px;
+    padding-left: 75px;
+    padding-right: 75px;
+    ul {
+        display: flex;
+        justify-content: space-around;
+    }
+    a {
+        color: #808080;    
+    }
+}

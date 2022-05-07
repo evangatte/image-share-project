@@ -16,14 +16,19 @@
     "url": "https://github.com/colbygatte/express-sfcc-training.git"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "bootstrap": "^4.5",
     "dotenv": "^6.0.0",
     "ejs": "^3.1.6",
     "express": "^4.16.4",
     "express-router": "0.0.1",
+    "express-session": "^1.17.2",
     "jquery": "^3.5.1",
     "mongoose": "^6.1.7",
+    "multer": "^1.4.4",
     "nodemon": "^1.18.4",
+    "passport": "^0.5.2",
+    "passport-local": "^1.0.0",
     "popper.js": "^1.16.1",
     "serve-favicon": "^2.5.0"
   },

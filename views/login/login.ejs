@@ -6,7 +6,19 @@
 <body>
 <%- include('../partials/header') %>
 
-
+    <div class="container mt-5">
+        <form  class="w-75 mx-auto pt-5" action="/login" method="POST">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" name="email" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="text" name="password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
 
 <%- include('../partials/footer') %>
 </body>
