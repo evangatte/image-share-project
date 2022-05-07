@@ -3,9 +3,7 @@ import Popper from "popper.js";
 window.$ = window.jQuery = require('jquery');
 
 $(() => {
-	//require js partials right here
-   // require('./js/navbar');
-   // require('./js/homepage');
+   require('./js/photoPanel');
 });
 
 require('bootstrap');

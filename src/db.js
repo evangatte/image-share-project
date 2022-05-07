@@ -31,9 +31,20 @@ const ProductSchema = new Schema({
     name: String
 });
 
+const FileSchema = new Schema({
+    createdAt: {
+        type: Date,
+        default: Date.now,
+    },
+    name: {
+        type: String,
+        required: [true, 'Uploaded file must have name'],
+    },
+})
 
 exports.ProductModel = mongoose.model('Product', ProductSchema);
 exports.UserModel = mongoose.model('User', userSchema);
+exports.FileModel = mongoose.model('File', FileSchema)
 
 exports.setup = function setup() {
     if (db) {
