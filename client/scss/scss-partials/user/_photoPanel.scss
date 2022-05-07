@@ -4,13 +4,31 @@
 
 #photoPanelContent {
 	height: 100vh;
-	.left-col {
-		//background-color: #99DDFF;
-		//background-color: #3FD2C7;
-		//color: #00458B;
+	.previewRow {
+		height: 20vh;
+		div {
+			border: solid;
+		}
+		.rowImage {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			.rowImg {
+				height: auto;
+				width: 100%;
+			}	
+		}
+	}	
+	#previewRowOne {
+		height: 20vh;
+	}
+	#previewRowTwo {
+		height: 20vh;	
 	}
 	#previewImage {
 		height: auto;
 		width: 100%;
 	}
 }
+
+

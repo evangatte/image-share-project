@@ -7,11 +7,24 @@
 <%- include('../partials/header') %>
 	<div class="container-fluid mt-5" id="photoPanelContainer">
 		<div class="container" id="photoPanelContent">
+
+			<!-- top left container -->
 			<div class="row">
-				<div class="col" id="someStuff">
-					
+				<div class="col mr-2" id="someStuff">
+					<div class="row mb-1 previewRow" id="previewRowOne">
+						<div class="col rowImage"><img class="rowImg" src="" id="rowOneImageOne" alt"></div>
+						<div class="col rowImage"><img class="rowImg" src="" alt="" id="rowOneImageTwo"></div>
+						<div class="col rowImage"><img class="rowImg" src="" alt="" id="rowOneImageThree"></div>
+					</div>
+					<div class="row previewRow" id="previewRowTwo">
+						<div class="col rowImage"><img class="rowImg" src="" alt="" id="rowTwoImageOne"></div>
+						<div class="col rowImage"><img class="rowImg" src="" alt="" id="rowThreeImageTwo"></div>
+						<div class="col rowImage"><img class="rowImg" src="" alt="" id="rowThreeImageThree"></div>
+					</div>
 				</div>
-				<div class="col border left-col" id="photoPanel">
+
+				<!-- top right container -->
+				<div class="col border left-col text-center" id="photoPanel">
 					<% if (currentUser) { %> 
 						<h1>Hello <%= currentUser.firstName %> </h1>
 					<% } else { %> 
@@ -37,11 +50,31 @@
 			</div>
 
 
-
-			<div class="row h-50 text-center mt-5">
+			<!-- bottom left container -->
+			<div class="row h-50 text-center mt-1">
 				<div class="col">
-					
+					<div class="row w-75 mx-auto">
+						<div class="col">
+							<button class="btn btn-success" id="addToGridBtn">Add To Grid</button>
+						</div>
+					</div>	
+					<div class="row mt-5">
+						<div class="col">
+							<form action="#" class="mt-5" method="POST">
+								<h3>Happy with your layout?</h3>
+								<input type="hidden" name="rowOneImageOneInput" id="rowOneImageOneInput">
+								<input type="hidden" name="rowOneImageTwoInput" id="rowOneImageTwoInput">
+								<input type="hidden" name="rowOneImageThreeInput" id="rowOneImageThreeInput">
+								<input type="hidden" name="rowTwoImageOneInput" id="rowTwoImageOneInput">
+								<input type="hidden" name="rowTwoImageTwoInput" id="rowTwoImageTwoInput">
+								<input type="hidden" name="rowTwoImageThreeInput" id="rowTwoImageThreeInut">
+								<button type="submit" class="btn btn-success">Submit</button>
+							</form>
+						</div>
+					</div>
 				</div>
+
+				<!-- bottom right container -->
 				<div class="col border">
 					<img id="previewImage" src="" alt="">
 				</div>
