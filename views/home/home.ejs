@@ -19,6 +19,33 @@
             </div>
         </div>
 
+        <div class="container" id="homePageImageContainer">
+            <% if (gridDisplay) {%> 
+                <div class="row homePageImageRow">
+                    <div class="col homeRowImageCol"><img src="<%= gridDisplay.rowOneImageOne %> " alt=""></div>
+                    <div class="col homeRowImageCol"><img src="<%= gridDisplay.rowOneImageTwo %>" alt=""></div>
+                    <div class="col homeRowImageCol"><img src="<%= gridDisplay.rowOneImageThree %>" alt=""></div>
+                </div>
+                <div class="row homePageImageRow">
+                    <div class="col homeRowImageCol"><img src="<%= gridDisplay.rowTwoImageOne %> " alt=""></div>
+                    <div class="col homeRowImageCol"><img src="<%= gridDisplay.rowTwoImageTwo %> " alt=""></div>
+                    <div class="col homeRowImageCol"><img src="<%= gridDisplay.rowTwoImageThree %> " alt="">
+                    </div>
+                </div>
+            <% } else {%> 
+                <div class="row homePageImageRow" >
+                    <div class="col homeRowImageCol"><img src="" alt=""></div>
+                    <div class="col homeRowImageCol"><img src="" alt=""></div>
+                    <div class="col homeRowImageCol"><img src="" alt=""></div>
+                </div>
+                <div class="row homePageImageRow">
+                    <div class="col homeRowImageCol"><img src="" alt=""></div>
+                    <div class="col homeRowImageCol"><img src="" alt=""></div>
+                    <div class="col homeRowImageCol"><img src="" alt=""></div>
+                </div>
+            </div>
+            <% } %> 
+
         <%- include('../partials/footer') %>
     </body>
 </html>

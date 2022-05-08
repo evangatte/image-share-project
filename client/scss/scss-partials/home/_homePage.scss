@@ -1,0 +1,15 @@
+#homePageImageContainer {
+	.homePageImageRow {
+		height: 30vh;
+	}
+	.homeRowImageCol {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: solid;
+		img {
+			height: auto;
+			width: 50%;
+		}
+	}
+}

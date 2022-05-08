@@ -1,3 +1,11 @@
+const $rowOneImageOneInput = $('#rowOneImageOneInput');
+const $rowOneImageTwoInput = $('#rowOneImageTwoInput');
+const $rowOneImageThreeInput = $('#rowOneImageThreeInput');
+const $rowTwoImageOneInput = $('#rowTwoImageOneInput');
+const $rowTwoImageTwoInput = $('#rowTwoImageTwoInput');
+const $rowTwoImageThreeInput = $('#rowTwoImageThreeInput');
+
+
 //preview image
 const $previewImage = $('#previewImage');
 $('#photoDropdown li').hover(
@@ -35,6 +43,22 @@ $('#addToGridBtn').click(function() {
 	
 	$gridSquare.attr('src', `${previewImageSrc}`);
 })
+
+
+$('#happyBtn').click(function() {
+	$rowOneImageOneInput.val($('#rowOneImageOne').attr('src'))	
+})
+
+$('#submitGridBtn').click(function() {
+	$rowOneImageOneInput.val($('#rowOneImageOne').attr('src'))
+	$rowOneImageTwoInput.val($('#rowOneImageTwo').attr('src'))
+	$rowOneImageThreeInput.val($('#rowOneImageThree').attr('src'))
+	$rowTwoImageOneInput.val($('#rowTwoImageOne').attr('src'))
+	$rowTwoImageTwoInput.val($('#rowTwoImageTwo').attr('src'))
+	$rowTwoImageThreeInput.val($('#rowTwoImageThree').attr('src'))
+})
+
+
 
 
 

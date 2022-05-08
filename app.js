@@ -3,6 +3,8 @@ const app = express();
 const session = require('express-session');
 const passport = require('passport');
 const local = require('./strategies/local');
+const userRouter = require('./routes/user')
+
 
 require('./src/db').setup();
 require('dotenv').config();
@@ -20,6 +22,27 @@ app.use(function (req, res, next) {
     next();
 });
 
+// const gridDisplayObj = {
+//     rowOneImageOne: 'asdf',
+// 	rowOneImageTwo: '',
+// 	rowOneImageThree: '',
+// 	rowTwoImageOne: '',
+// 	rowTwoImageTwo: '',
+// 	rowTwoImageThree: ''
+// }
+
+
+app.use(function(req, res, next) {
+    res.locals.gridDisplay = userRouter.gridDisplay
+    next()
+})
+
+console.log(userRouter.gridDisplay)
+
+
+
+
+
 app.get('/', function (req, res) {
     res.redirect('/home');
 });
@@ -27,7 +50,7 @@ app.get('/', function (req, res) {
 app.use('/login', require('./routes/login'));
 app.use('/home', require('./routes/home'));
 app.use('/registration', require('./routes/registration'));
-app.use('/user', require('./routes/user'));
+app.use('/user', userRouter.router);
 
 app.listen(process.env.PORT, () => {
     console.log(`Listening on port ${process.env.PORT || 3000}.`);
