@@ -66,6 +66,7 @@ router.post('/upload', upload.single('testImage'), async (req, res) => {
 	console.log(req.file.filename);
 	res.redirect('/user/account');
 })
+
 let gridDisplay = {}
 
 router.post('/grid-layout', (req, res) => {

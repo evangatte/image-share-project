@@ -22,14 +22,6 @@ app.use(function (req, res, next) {
     next();
 });
 
-// const gridDisplayObj = {
-//     rowOneImageOne: 'asdf',
-// 	rowOneImageTwo: '',
-// 	rowOneImageThree: '',
-// 	rowTwoImageOne: '',
-// 	rowTwoImageTwo: '',
-// 	rowTwoImageThree: ''
-// }
 
 
 app.use(function(req, res, next) {
